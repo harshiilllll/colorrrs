@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>	Colorrrs (Simple & Fast)</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+	<!-- FAV ICON -->
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+</head>
+
+<style>
+			@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap');
+
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			#bg{
+				background-color: #ffd454;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				height: 100vh;
+				width: 100%;
+				color: black;
+			}
+			.title{
+				position: absolute;
+				top: 2%;
+				left: 5%;
+				font-size: 1.5rem;
+				font-weight: 100;
+				font-family: 'Montserrat', sans-serif;
+			}
+			.fa-clone{
+				font-size: 2.9rem;
+				margin-left: 20px;
+				cursor: pointer;
+				transition: all 125ms step-start;
+			}
+			.fa-clone:hover{
+				scale: 1.08;
+			}
+			.insta{
+				display: flex;
+				align-items: center;
+				padding: 3px 10px 3px 5px;
+				position: absolute;
+				bottom: 2%;
+				left: 5%;
+				color: #222 !important;
+			}
+			.insta:hover{
+				background-color: rgba(0, 0, 0, 0.1);
+			}
+			.insta a{
+				display: flex;
+				justify-content: center;
+				text-decoration: none;
+			}
+			.insta a i{
+				font-size: 1.6rem;
+				margin-right: 10px;
+			}
+			.insta a p{
+				margin: 2px 0 0 0 ;
+				font-family: 'Barlow', sans-serif;
+			}
+			.text{
+				color: #222;	
+			}
+
+			.a{
+				text-decoration: none;
+			}
+
+			.input{	
+				color: #222;
+				height: 50px;
+				width: 400px;
+				font-size: 34px;
+				padding-left: 0px;
+				background: transparent;
+				border: none;
+				outline: none;
+				border-bottom: 1px dotted #222;
+				font-family: 'Montserrat', sans-serif;
+			}
+			.input::placeholder{
+				font-size: 20px;
+			}
+			
+
+			@media only screen and (max-width: 500px) {
+				.input{
+					width: 380px;
+				}
+
+			}
+			@media only screen and (max-width: 480px) {
+				.input{
+					width: 340px;
+				}
+				.input::placeholder{
+					font-size: 16px;
+				}
+			}
+			@media only screen and (max-width: 390px) {
+				.input{
+					width: 300px;
+				}
+				.input::placeholder{
+					font-size: 16px;
+				}
+			}
+			@media only screen and (max-width: 300px) {
+				.input{
+					width: 250px;
+				}
+				.input::placeholder{
+					font-size: 12px;
+				}
+			}
+
+		</style>
+
+<body id="bg" onkeypress="changeColor();" onclick="changeColor();">
+	<p class="title text"><a href="index.html" class="a text">COLORRRS</a></p>
+		<div class="container">
+			<input placeholder="#hex, rgb( ), hsl,  or simply color name" id="input" class="input" type="text">
+		</div>
+		<div class="insta">
+			<a href="https://www.instagram.com/harshiilllll/">
+				<i class="text fab fa-instagram"></i>
+				<p class="text">harshiilllll</p>
+			</a>
+		</div>
+
+
+
+		<!-- SCRIPT------------------------------------------------------------------------ -->
+
+		<script>
+			setInterval(
+			function changeColor(){
+				let color = document.getElementById('input').value;
+				document.getElementById('bg').style.backgroundColor = color
+			}, 1);
+
+		</script>
+</body>
+</html>
